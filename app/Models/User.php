@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,7 +21,6 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -32,7 +30,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
     /**
      * The attributes that should be cast.
      *
@@ -55,6 +52,6 @@ class User extends Authenticatable
      */
     public function avatar(): string
     {
-        return 'https://www.gravatar.com/' . md5($this->email) . '?s=80&d=mp';
+        return 'https://otakukart.com/wp-content/uploads/2021/11/Itachi-Uchiha-scaled.jpeg';
     }
 }
